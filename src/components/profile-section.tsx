@@ -1,14 +1,15 @@
 import Image from 'next/image'
 import React from 'react'
-import Profile from '../../public/IMG-20240504-WA0013.jpg'
-import { MapPin } from 'lucide-react'
+import Profile from '../../public/ProfileImage.jpeg'
 import { Button } from './ui/button'
 import Linkedin from '../../public/LinkedIn.svg'
 import Instagram from '../../public/Instagram.svg'
 import Twitter from '../../public/X.svg'
 import Mail from '../../public/Mail.svg'
+import Github from '../../public/Github.svg'
 import Link from 'next/link'
 import location from '../../public/Location.png'
+import { ArrowDownToLine } from 'lucide-react'
 
 const ProfileSection = () => {
   return (
@@ -17,9 +18,9 @@ const ProfileSection = () => {
         <div className='flex h-[250px] w-[250px] items-center justify-start rounded-full object-contain'>
           <Image
             src={Profile}
-            alt='logo'
-            width={200}
-            height={200}
+            alt='profile'
+            width={250}
+            height={250}
             className='rounded-full'
           />
         </div>
@@ -38,18 +39,31 @@ const ProfileSection = () => {
             <Image src={Linkedin} alt='LinkedIn' width={36} height={36} />
           </Link>
           <Link href={'https://rb.gy/z7cz51'}>
-            <Image src={Instagram} alt='LinkedIn' width={36} height={36} />
+            <Image src={Instagram} alt='Instagram' width={36} height={36} />
           </Link>
           <Link href={'https://rb.gy/4goiry'}>
-            <Image src={Twitter} alt='LinkedIn' width={36} height={36} />
+            <Image src={Twitter} alt='Twitter' width={36} height={36} />
           </Link>
           <Link href={'https://rb.gy/6mqa63'}>
-            <Image src={Mail} alt='LinkedIn' width={36} height={36} />
+            <Image src={Mail} alt='Gmail' width={36} height={36} />
+          </Link>
+          <Link href={'https://rb.gy/icz5jn'}>
+            <Image src={Github} alt='Github' width={36} height={36} />
           </Link>
         </div>
-        <div className='mt-6 flex items-center justify-start'>
-          <Button variant='default' className='p-4 shadow-xl'>
+        <div className='mt-6 flex items-center justify-start gap-2'>
+          <Button
+            variant='default'
+            className='flex items-center justify-center bg-gradient-to-r from-indigo-400 to-indigo-600 p-4 text-white shadow-xl hover:-rotate-2'
+          >
             Contact me!
+          </Button>
+          <Button
+            variant='secondary'
+            className='flex items-center justify-center gap-1 p-4 shadow-xl hover:rotate-2'
+          >
+            <Link href='https://bit.ly/3KbpHtY'>Download Resume</Link>
+            <ArrowDownToLine />
           </Button>
         </div>
       </section>

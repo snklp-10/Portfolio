@@ -1,26 +1,30 @@
 'use client'
 import ProfileSection from '@/components/profile-section'
 import ProjectSection from '@/components/project-section'
-import { motion } from 'framer-motion'
 import React from 'react'
 
 const Page = () => {
   return (
     <>
-      <section className='flex h-[100vh] bg-gray-100/60 px-10 py-10'>
-        <div className='flex h-full w-[35%] items-center justify-center'>
-          <ProfileSection />
-        </div>
-
-        <div className=' relative flex h-full w-[65%] items-center justify-center rounded-3xl bg-white/70 '>
-          <div className='relative w-1/2 opacity-90'>
-            <div className='absolute -top-[200px] left-40 h-[400px] w-[400px] rotate-3 animate-blob rounded-full bg-indigo-300 mix-blend-multiply blur-3xl filter'></div>
-            <div className='absolute -top-[200px] left-20 h-[200px] w-[200px] animate-blob rounded-full bg-rose-400 mix-blend-multiply blur-3xl filter'></div>
-            <div className='absolute -top-[200px] left-[400px] h-[300px] w-[300px] animate-blob rounded-full bg-sky-300 mix-blend-multiply blur-3xl filter'></div>
-            <div className='absolute left-[500px] h-[200px] w-[200px] animate-blob rounded-full bg-pink-400 mix-blend-multiply blur-3xl filter'></div>
-          </div>
-          <div className='absolute top-4 w-full p-4'>
-            <ProjectSection />
+      <section>
+        <div className='bg-gray-100/60 px-8 py-10'>
+          <div className='flex flex-col items-center justify-center gap-5 xl:flex-row '>
+            <div className='h-[90vh] w-full rounded-2xl bg-gray-100/75 xl:w-[35%]'>
+              <div className='flex h-full w-full items-center justify-center'>
+                <div className='flex items-center justify-center'>
+                  <ProfileSection />
+                </div>
+              </div>
+            </div>
+            <div className='h-[90vh] w-full rounded-2xl bg-yellow-400 xl:w-[65%]'>
+              <div className='flex h-full w-full items-center justify-center'>
+                <div className='flex h-full w-full items-center justify-center px-4 py-4'>
+                  <div className='flex items-center justify-center '>
+                    <ProjectSection />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

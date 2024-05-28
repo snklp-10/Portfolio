@@ -22,7 +22,8 @@ const ProjectSection = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{
-                    duration: 1
+                    duration: 1,
+                    delay: 0.8
                   }}
                 >
                   <div className='m:mb-4 flex items-center justify-start sm:w-full '>
@@ -58,7 +59,7 @@ const ProjectSection = () => {
             animate={{ opacity: 1 }}
             transition={{
               duration: 1,
-              delay: 0.8
+              delay: 1.1
             }}
           >
             <div className='flex items-center justify-start'>

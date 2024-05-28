@@ -9,7 +9,7 @@ const ProjectList = () => {
   const isSmallScreen = useMediaQuery({ maxWidth: 640 })
   return (
     <>
-      <div className='mt-6 flex w-full items-center justify-center '>
+      <div className='mt-6 flex w-full items-center justify-center'>
         <ul className='w-full space-y-2 py-3'>
           <li>
             <div className='flex w-full items-center justify-center gap-1 pt-1'>

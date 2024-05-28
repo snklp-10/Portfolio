@@ -8,10 +8,11 @@ import Twitter from '../../public/X.svg'
 import Mail from '../../public/Mail.svg'
 import Github from '../../public/Github.svg'
 import Link from 'next/link'
-import location from '../../public/Location.png'
+
 import { ArrowDownToLine, MapPinIcon } from 'lucide-react'
 import { Tilt_Warp } from 'next/font/google'
-import { cn } from '@/lib/utils'
+
+import { motion } from 'framer-motion'
 
 const font = Tilt_Warp({ subsets: ['latin'] })
 
@@ -47,6 +48,39 @@ const ProfileSection = () => {
                     className='h-[25px] w-[25px] sm:h-[36px] sm:w-[36px]'
                   />
                 </Link>
+
+                <Link href={'https://rb.gy/icz5jn'}>
+                  <Image
+                    src={Github}
+                    alt='Github'
+                    className='h-[25px] w-[25px] sm:h-[36px] sm:w-[36px]'
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className='flex w-full items-center justify-center'>
+            <Button
+              variant='secondary'
+              className='flex items-center justify-center gap-1 text-[10px] shadow-lg hover:rotate-2 sm:text-[16px]'
+            >
+              <Link href='https://rb.gy/oztocw'>Download Resume</Link>
+              <ArrowDownToLine size={15} />
+            </Button>
+          </div>
+        </div>
+        <div className='my-3 rounded-xl shadow-xl'>
+          <div className='flex items-center justify-center'>
+            <div className='flex w-full items-center justify-center pt-2'>
+              <span className='text-[14px] text-gray-900'>Contact me!</span>
+            </div>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: 1, y: -4 }}
+          >
+            <div className='flex items-center justify-center '>
+              <div className='my-2 flex items-center justify-center gap-3'>
                 <Link href={'https://rb.gy/z7cz51'}>
                   <Image
                     src={Instagram}
@@ -68,30 +102,9 @@ const ProfileSection = () => {
                     className='h-[25px] w-[25px] sm:h-[36px] sm:w-[36px]'
                   />
                 </Link>
-                <Link href={'https://rb.gy/icz5jn'}>
-                  <Image
-                    src={Github}
-                    alt='Github'
-                    className='h-[25px] w-[25px] sm:h-[36px] sm:w-[36px]'
-                  />
-                </Link>
               </div>
             </div>
-          </div>
-          <div className='mt-3 flex items-center justify-center'>
-            <div className='flex items-center justify-center gap-2'>
-              <Button className='bg-indigo-600 text-[10px] shadow-lg sm:text-[16px]'>
-                Contact me!
-              </Button>
-              <Button
-                variant='secondary'
-                className='flex items-center justify-center gap-1 text-[10px] shadow-lg sm:text-[16px]'
-              >
-                Download Resume
-                <ArrowDownToLine size={15} />
-              </Button>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

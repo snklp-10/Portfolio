@@ -95,7 +95,7 @@ const ProfileSection = () => {
                     className='h-[25px] w-[25px] sm:h-[36px] sm:w-[36px]'
                   />
                 </Link>
-                <Link href={'https://rb.gy/6mqa63'}>
+                <Link href={'mailto:sankalpppppp@gkmail.com'}>
                   <Image
                     src={Mail}
                     alt='Gmail'

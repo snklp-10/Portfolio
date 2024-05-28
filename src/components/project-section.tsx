@@ -27,7 +27,7 @@ const ProjectSection = () => {
                   }}
                 >
                   <div className='m:mb-4 flex items-center justify-start sm:w-full '>
-                    <h1 className='text-[28px] font-bold text-gray-800 lg:text-[54px]'>
+                    <h1 className='text-[28px] font-semibold text-gray-800 lg:text-[54px]'>
                       <span className='relative'>
                         I love creating
                         <span className='whiespace-nowrap relative left-2 sm:left-3 md:top-0'>
@@ -41,8 +41,8 @@ const ProjectSection = () => {
                       </span>
                     </h1>
                   </div>
-                  <div className='mt-2 flex items-center justify-center sm:mt-0'>
-                    <span className='text-[14px] text-gray-700 md:text-[22px]'>
+                  <div className='mt-2 flex items-center justify-start  sm:mt-0'>
+                    <span className='text-[18px] font-medium text-gray-700 lg:text-[22px]'>
                       <h2>
                         Hello! I am computer science student, who is interested
                         in solving problems with possible app solutions.

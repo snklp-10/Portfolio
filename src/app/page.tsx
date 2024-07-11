@@ -19,7 +19,7 @@ const font_5 = Satoshi_Bold({
   src: '../../fonts/Satoshi-Bold.woff'
 })
 
-const page = () => {
+const Page = () => {
   const [showElement, setShowElement] = useState(false)
 
   return (
@@ -61,7 +61,8 @@ const page = () => {
                   font_2.className
                 )}
               >
-                Hi! I'm <br />
+                Hi! myself
+                <br />
                 <span className={cn('text-7xl', font_3.className)}>
                   sankalp sandip pujare,{' '}
                 </span>
@@ -92,4 +93,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

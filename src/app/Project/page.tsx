@@ -1,12 +1,5 @@
 import React from 'react'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle
-} from '@/components/ui/card'
+
 import Satoshi_Regular from 'next/font/local'
 import Satoshi_Bold from 'next/font/local'
 import CabinetGrotesk from 'next/font/local'

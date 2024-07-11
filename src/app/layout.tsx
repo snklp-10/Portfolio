@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
-import { Tilt_Warp } from 'next/font/google'
 import './globals.css'
-
-const font = Tilt_Warp({ subsets: ['latin'] })
+import { cn } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'Portfolio Website',
@@ -16,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={font.className}>{children}</body>
+      <body className={cn('bg-[#FFF5EB]')}>{children}</body>
     </html>
   )
 }

@@ -54,10 +54,10 @@ const Page = () => {
             </Button>
           </div>
           <div className='relative flex h-full flex-col items-center justify-center bg-[#FF4242] md:w-[70%]'>
-            <div className='relative flex h-full w-full flex-col items-center justify-center px-6 py-8'>
+            <div className='relative flex h-full w-full flex-col items-center justify-center  py-8'>
               <p
                 className={cn(
-                  'max-w-screen-lg p-8 text-3xl leading-normal text-[#FFF5EB] ',
+                  'max-w-screen-lg p-8 text-xl leading-normal text-[#FFF5EB] md:text-3xl ',
                   font_2.className
                 )}
               >

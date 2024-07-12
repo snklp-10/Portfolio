@@ -143,7 +143,7 @@ const Page = () => {
                             font_3.className
                           )}
                         >
-                          <Link href='https://rb.gy/drdbtt'>Link</Link>
+                          <Link href={items.link}>Link</Link>
                           <ArrowUpRight size={25} />
                         </Button>
                       </div>

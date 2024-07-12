@@ -22,7 +22,7 @@ const font_3 = Satoshi_Bold({
 
 const Page = () => {
   const [showElement, setShowElement] = useState(false)
-  const screenSize = useMediaQuery({ maxWidth: 800 })
+  const screenSize = useMediaQuery({ maxWidth: 750 })
 
   return (
     <>
@@ -57,15 +57,13 @@ const Page = () => {
           </div>
           <div
             className={
-              screenSize
-                ? 'relative top-10 flex h-full flex-col items-center justify-center md:top-0 md:h-[90vh] md:w-[70%]'
-                : 'relative top-10 flex h-full flex-col items-center justify-center md:top-0 md:w-[70%] lg:h-[90vh]'
+              'relative top-20 flex h-full flex-col items-center justify-center md:top-0 md:w-[70%] min-[800px]:h-[90vh]'
             }
           >
             <div className='relative flex h-full w-full flex-col items-center justify-center  py-8'>
               <div
                 className={cn(
-                  'max-w-screen-lg p-8 text-xl leading-relaxed text-[#FF4242] lg:text-4xl ',
+                  'max-w-screen-lg px-6 text-xl leading-relaxed text-[#FF4242] md:p-8 md:text-3xl lg:text-4xl',
                   font_1.className
                 )}
               >

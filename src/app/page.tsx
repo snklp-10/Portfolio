@@ -39,7 +39,7 @@ const Page = () => {
         </div>
       )}
       <section className='p-8'>
-        <div className='relative flex h-full items-center justify-center lg:h-[90vh]'>
+        <div className='relative flex h-full items-center justify-center'>
           <div className='absolute right-0 top-0 z-50 m-4 flex justify-end'>
             <Button
               className='bg-transparent hover:bg-transparent'
@@ -53,7 +53,7 @@ const Page = () => {
               />
             </Button>
           </div>
-          <div className='relative top-10 flex h-full flex-col items-center justify-center md:top-0 md:w-[70%]'>
+          <div className='relative top-10 flex h-full xl:h-[90vh] flex-col items-center justify-center md:top-0 md:w-[70%]'>
             <div className='relative flex h-full w-full flex-col items-center justify-center  py-8'>
               <div
                 className={cn(

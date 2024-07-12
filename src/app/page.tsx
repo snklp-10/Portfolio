@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { ArrowUpRight, Download, Menu } from 'lucide-react'
 import Link from 'next/link'
+import { useMediaQuery } from 'react-responsive'
 
 const font_1 = Satoshi_Regular({
   src: '../../fonts/Satoshi-Regular.woff'
@@ -21,6 +22,7 @@ const font_3 = Satoshi_Bold({
 
 const Page = () => {
   const [showElement, setShowElement] = useState(false)
+  const screenSize = useMediaQuery({ maxWidth: 800 })
 
   return (
     <>
@@ -53,30 +55,40 @@ const Page = () => {
               />
             </Button>
           </div>
-          <div className='relative top-10 flex sm:h-full h-[90vh] flex-col items-center justify-center md:top-0 md:w-[70%]'>
+          <div
+            className={
+              screenSize
+                ? 'relative top-10 flex h-full flex-col items-center justify-center md:top-0 md:h-[90vh] md:w-[70%]'
+                : 'relative top-10 flex h-full flex-col items-center justify-center md:top-0 md:w-[70%] lg:h-[90vh]'
+            }
+          >
             <div className='relative flex h-full w-full flex-col items-center justify-center  py-8'>
               <div
                 className={cn(
-                  'max-w-screen-lg p-8 text-2xl leading-relaxed text-[#FF4242] lg:text-4xl ',
+                  'max-w-screen-lg p-8 text-xl leading-relaxed text-[#FF4242] lg:text-4xl ',
                   font_1.className
                 )}
               >
                 Hi! myself
                 <br />
-                <span className={cn('text-7xl', font_2.className)}>
+                <span className={cn('text-7xl leading-none', font_2.className)}>
                   sankalp sandip pujare,{' '}
                 </span>
                 <br />
                 <div className='mt-3 leading-snug'>
-                  a computer science student developing{' '}
+                  a computer science student. <br />I love drawing{' '}
                   <span className={cn(font_3.className)}>
-                    full stack applications,{' '}
+                    illustrations, creating animations{' '}
                   </span>
-                  and focused on creating{' '}
+                  and developing{' '}
+                  <span className={cn(font_3.className)}>
+                    full stack applications.{' '}
+                  </span>
+                  I found creating{' '}
                   <span className={cn(font_3.className)}>
                     innovative, efficient, and impactful{' '}
                   </span>
-                  software solutions.
+                  software solutions very interesting.
                   <Button
                     className={cn(
                       'mt-5 flex items-center justify-center gap-1 bg-[#FF4242] p-4 text-xl hover:border hover:border-[#FF4242] hover:bg-transparent hover:text-[#FF4242]',

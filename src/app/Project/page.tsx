@@ -68,7 +68,7 @@ const Page = () => {
           {cardContent.map(items => (
             <>
               {items.title === 'Weather Application' ? (
-                <div className='h-[80vh] w-full rounded-3xl bg-[#FF4242]'>
+                <div className='min-h-min w-full rounded-3xl bg-[#FF4242] py-14 xl:h-[80vh] xl:py-0'>
                   <div className='mt-10 flex h-full w-full flex-col items-center justify-center p-6 text-[#FFF5EB]'>
                     <div className='flex w-full items-center justify-start'>
                       <h1 className={cn('text-5xl ', font_2.className)}>
@@ -89,13 +89,18 @@ const Page = () => {
                         {items.badge_2}
                       </Badge>
                     </span>
-                    <p className={cn('mt-2 text-2xl', font_1.className)}>
+                    <p
+                      className={cn(
+                        'mt-2 text-xl md:text-2xl',
+                        font_1.className
+                      )}
+                    >
                       {items.cardDescription}
                     </p>
                   </div>
                 </div>
               ) : (
-                <div className='h-[80vh] w-full rounded-3xl bg-[#FF4242]'>
+                <div className='min-h-max w-full rounded-3xl bg-[#FF4242] pb-4 xl:h-[80vh]'>
                   {items.imgSrc ? (
                     <Image
                       src={items.imgSrc}
@@ -122,15 +127,20 @@ const Page = () => {
                         {items.badge_2}
                       </Badge>
                     </span>
-                    <p className={cn('mt-2 text-2xl ', font_1.className)}>
+                    <p
+                      className={cn(
+                        'mt-2 text-xl md:text-2xl ',
+                        font_1.className
+                      )}
+                    >
                       {items.cardDescription}
                     </p>
                     {items.link ? (
-                      <div className='absolute bottom-16 flex items-center justify-start'>
+                      <div className='mt-3 flex items-center justify-start xl:absolute xl:bottom-14'>
                         <Button
                           className={cn(
-                            'flex items-center justify-center gap-1 bg-[#222222] p-4 text-xl',
-                            font_1.className
+                            'flex items-center justify-center gap-1 rounded-2xl bg-[#FFF5EB] p-3 text-xl text-[#FF4242] hover:border hover:border-[#FFF5EB] hover:bg-transparent hover:text-[#FFF5EB]',
+                            font_3.className
                           )}
                         >
                           <Link href='https://rb.gy/drdbtt'>Link</Link>

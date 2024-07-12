@@ -53,7 +53,7 @@ const Page = () => {
               />
             </Button>
           </div>
-          <div className='relative top-10 flex h-full xl:h-[90vh] flex-col items-center justify-center md:top-0 md:w-[70%]'>
+          <div className='relative top-10 flex sm:h-full h-[90vh] flex-col items-center justify-center md:top-0 md:w-[70%]'>
             <div className='relative flex h-full w-full flex-col items-center justify-center  py-8'>
               <div
                 className={cn(

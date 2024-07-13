@@ -13,7 +13,7 @@ const font_1 = Satoshi_Regular({
   src: '../../fonts/Satoshi-Regular.woff'
 })
 const font_2 = CabinetGrotesk({
-  src: '../../fonts/WEB/Gonzaga-Trial-Black.woff'
+  src: '../../fonts/CabinetGrotesk-Extrabold.woff'
 })
 
 const font_3 = Satoshi_Bold({
@@ -27,8 +27,8 @@ const Page = () => {
   return (
     <>
       {showElement && (
-        <div className='absolute z-50 h-full w-full bg-[#222222]/40 p-8 backdrop-blur'>
-          <div className='absolute right-10 top-20 m-4 text-[#FFF5EB] '>
+        <div className='absolute z-50 h-full w-full bg-[#222222]/40 p-5 backdrop-blur md:p-8'>
+          <div className='absolute right-6 top-20 m-4 flex w-full items-center justify-end text-[#FFF5EB] md:right-10 '>
             <ul className={cn('space-y-1 text-3xl ', font_3.className)}>
               <li className='text-[#FFF5EB] hover:cursor-default hover:text-white hover:underline'>
                 <Link href={'/Project'}>Projects</Link>
@@ -42,7 +42,7 @@ const Page = () => {
       )}
       <section className='p-8'>
         <div className='relative flex h-full items-center justify-center'>
-          <div className='absolute right-0 top-0 z-50 m-4 flex justify-end'>
+          <div className='absolute -right-4 top-0 z-50 m-4 flex justify-end md:right-0'>
             <Button
               className='bg-transparent hover:bg-transparent'
               onClick={() => {
@@ -57,13 +57,13 @@ const Page = () => {
           </div>
           <div
             className={
-              'relative top-20 flex h-full flex-col items-center justify-center md:top-0 md:w-[70%] min-[800px]:h-[90vh]'
+              'relative top-24 flex h-full flex-col items-center justify-center sm:top-28 md:top-0 md:w-[70%] min-[800px]:h-[90vh]'
             }
           >
-            <div className='relative flex h-full w-full flex-col items-center justify-center  py-8'>
+            <div className='relative flex h-full w-full flex-col items-center justify-center py-8'>
               <div
                 className={cn(
-                  'max-w-screen-lg px-6 text-xl leading-relaxed text-[#FF4242] md:p-8 md:text-3xl lg:text-4xl',
+                  'max-w-screen-lg px-4 text-xl leading-relaxed text-[#FF4242] md:p-8 md:px-6 md:text-3xl lg:text-4xl',
                   font_1.className
                 )}
               >
@@ -73,7 +73,7 @@ const Page = () => {
                   sankalp sandip pujare,{' '}
                 </span>
                 <br />
-                <div className='mt-3 leading-snug'>
+                <div className='mt-1 leading-snug'>
                   a computer science student. <br />I love drawing{' '}
                   <span className={cn(font_3.className)}>
                     illustrations, creating animations{' '}

@@ -63,7 +63,7 @@ const cardContent = [
 const Page = () => {
   return (
     <section className='m-8'>
-      <div className='flex h-full w-full items-center justify-center py-10'>
+      <div className='flex h-full w-full items-center justify-center py-8'>
         <div className='grid h-full place-items-center gap-6 sm:w-[80%] xl:grid-cols-2 2xl:grid-cols-3'>
           {cardContent.map(items => (
             <>
@@ -105,7 +105,7 @@ const Page = () => {
                     <Image
                       src={items.imgSrc}
                       alt='image'
-                      className='h-1/2 rounded-t-2xl object-cover'
+                      className='h-1/3 rounded-t-2xl object-cover md:h-1/2'
                     />
                   ) : (
                     ''
@@ -139,7 +139,7 @@ const Page = () => {
                       <div className='mt-3 flex items-center justify-start xl:absolute xl:bottom-14'>
                         <Button
                           className={cn(
-                            'flex items-center justify-center gap-1 rounded-2xl bg-[#FFF5EB] p-3 text-xl text-[#FF4242] hover:border hover:border-[#FFF5EB] hover:bg-transparent hover:text-[#FFF5EB]',
+                            'flex items-center justify-center gap-1 rounded-xl bg-[#FFF5EB] p-3 text-xl text-[#FF4242] hover:border hover:border-[#FFF5EB] hover:bg-transparent hover:text-[#FFF5EB]',
                             font_3.className
                           )}
                         >

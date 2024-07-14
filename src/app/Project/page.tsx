@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Satoshi_Regular from 'next/font/local'
 import Satoshi_Bold from 'next/font/local'
 import CabinetGrotesk from 'next/font/local'
@@ -12,6 +12,8 @@ import { Button } from '@/components/ui/button'
 import { ArrowUpRight } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
+import { useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const font_1 = Satoshi_Regular({
   src: '../../../fonts/Satoshi-Regular.woff'
@@ -61,6 +63,8 @@ const cardContent = [
 ]
 
 const Page = () => {
+  const ref = useRef(null)
+  const isInView = useInView(ref)
   return (
     <section className='m-8'>
       <div className='flex h-full w-full items-center justify-center py-8'>
@@ -68,7 +72,10 @@ const Page = () => {
           {cardContent.map(items => (
             <>
               {items.title === 'Weather Application' ? (
-                <div className='min-h-min w-full rounded-3xl bg-[#FF4242] py-14 xl:h-[80vh] xl:py-0'>
+                <div
+                  ref={ref}
+                  className='min-h-min w-full rounded-3xl bg-[#FF4242] py-14 xl:h-[80vh] xl:py-0 '
+                >
                   <div className='mt-10 flex h-full w-full flex-col items-center justify-center p-6 text-[#FFF5EB]'>
                     <div className='flex w-full items-center justify-start'>
                       <h1 className={cn('text-5xl ', font_2.className)}>
@@ -100,7 +107,10 @@ const Page = () => {
                   </div>
                 </div>
               ) : (
-                <div className='min-h-max w-full rounded-3xl bg-[#FF4242] pb-4 xl:h-[80vh]'>
+                <div
+                  ref={ref}
+                  className='min-h-max w-full rounded-3xl bg-[#FF4242] pb-4 xl:h-[80vh]'
+                >
                   {items.imgSrc ? (
                     <Image
                       src={items.imgSrc}

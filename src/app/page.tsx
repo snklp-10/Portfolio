@@ -84,11 +84,11 @@ const Page = () => {
                 <span className={cn(font_3.className)}>
                   full stack applications.{' '}
                 </span>
-                I found creating{' '}
+                I am passionate about developing{' '}
                 <span className={cn(font_3.className)}>
                   innovative, efficient, and impactful{' '}
                 </span>
-                software solutions very interesting.
+                software solutions.
                 <Button
                   className={cn(
                     'mt-8 flex items-center justify-center gap-1 bg-[#FF4242] p-4 text-xl hover:bg-transparent hover:text-[#FF4242] hover:ring-2 hover:ring-[#FF4242] ',
